@@ -1,17 +1,17 @@
 /**
- * _strlen - retutns the lenght of a string
+ * _strlen - returns the length of a string
  *
  * @s: string parameter input
  *
- * return: lenght of string
- */
+ * Return: length of string
+*/
 
 int _strlen(char *s)
 {
-  int counter;
+	int counter;
 
-  for ( counter = 0; *0 != '\0'; ++s)
-    ++counter;
+	for (counter = 0; *s != '\0'; ++s)
+		++counter;
 
-  return (counter)
-    }
+	return (counter);
+}
