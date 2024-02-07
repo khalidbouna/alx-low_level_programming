@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "hash_tables.h"
+
+/* Function prototypes */
+void test_hash_table_create(void);
+void print_result(hash_table_t *ht);
+
+int main(void)
+{
+    test_hash_table_create();
+    return 0;
+}
+
+void test_hash_table_create(void)
+{
+    hash_table_t *ht;
+
+    printf("Testing hash_table_create function...\n");
+
+    /* Test case 1: Create a hash table with size 0 */
+    printf("Test case 1: Create a hash table with size 0\n");
+    ht = hash_table_create(0);
+    print_result(ht);
+
+    /* Test case 2: Create a hash table with size 1024 */
+    printf("Test case 2: Create a hash table with size 1024\n");
+    ht = hash_table_create(1024);
+    print_result(ht);
+}
+
+void print_result(hash_table_t *ht)
+{
+    if (ht == NULL)
+        printf("Result: NULL\n");
+    else
+        printf("Result: %p\n", (void *)ht);
+}
